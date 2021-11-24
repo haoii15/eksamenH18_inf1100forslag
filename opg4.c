@@ -29,6 +29,8 @@ int kontroll(list_t *spor, list_t *fasit)
         // Dersom kodene ikke er like, har deltakeren ikke hvert innom i korrekt rekkefølge
         if (fasit->kode != spor->kode)
             return 0;
+    
+        fasit = list_next(fasititer);
     }
 
     return 1;
